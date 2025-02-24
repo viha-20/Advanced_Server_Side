@@ -1,0 +1,43 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CatNet</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Welcome to CatNet</h1>
+    <% if (cat) { %>
+      <div class="cat-display">
+          <h2><%= cat.name %></h2>
+          <img src="<%= cat.image %>" alt="<%= cat.name %>" width="300">
+          <p>Likes: <%= cat.likes %> | Dislikes: <%= cat.dislikes %></p>
+          <div class="actions">
+              <a href="/vote/<%= cat._id %>/like">Like</a>
+              <a href="/vote/<%= cat._id %>/dislike">Dislike</a>
+          </div>
+      </div>
+    <% } else { %>
+      <p>No cats available!</p>
+    <% } %>
+
+    <div class="liked-cats">
+        <h3>Your Last 3 Liked Cats</h3>
+        <% if (likedCats && likedCats.length > 0) { %>
+            <ul>
+              <% likedCats.forEach(function(likedCat) { %>
+                <li>
+                  <img src="<%= likedCat.image %>" alt="<%= likedCat.name %>" width="100">
+                  <span><%= likedCat.name %></span>
+                </li>
+              <% }); %>
+            </ul>
+        <% } else { %>
+            <p>You haven't liked any cats yet.</p>
+        <% } %>
+    </div>
+    <div>
+        <a href="/top">View Top Liked Cats</a>
+    </div>
+</body>
+</html>

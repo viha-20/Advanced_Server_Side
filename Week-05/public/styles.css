@@ -1,0 +1,22 @@
+/* public/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.cat-display, .liked-cats {
+    margin-bottom: 20px;
+}
+
+.actions a {
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+}
+
+.actions a:hover {
+    background-color: #0056b3;
+}
