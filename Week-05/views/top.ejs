@@ -1,0 +1,27 @@
+<!-- views/top.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Liked Cats</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Top Liked Cats</h1>
+    <% if (topCats && topCats.length > 0) { %>
+        <ul>
+            <% topCats.forEach(function(cat) { %>
+                <li>
+                    <h3><%= cat.name %></h3>
+                    <img src="<%= cat.image %>" alt="<%= cat.name %>" width="200">
+                    <p>Likes: <%= cat.likes %> | Dislikes: <%= cat.dislikes %></p>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No cats found.</p>
+    <% } %>
+    <div>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
