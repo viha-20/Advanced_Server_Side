@@ -1,0 +1,52 @@
+   body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  input {
+    margin: 10px 0;
+    padding: 8px;
+    width: 200px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+  }
+  
+  #usersList li button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  #usersList li button:hover {
+    background-color: darkred;
+  }
+       
+
+
+
+
+
+
